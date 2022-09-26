@@ -21,7 +21,7 @@ use ocelot::quarksilver::{
 use ocelot::tools::BenchmarkMetaData;
 
 use scuttlebutt::channel::{Receivable, Sendable};
-use scuttlebutt::ring::{Ring, R64};
+use scuttlebutt::ring::{Ring, R244};
 use scuttlebutt::{track_unix_channel_pair, AbstractChannel, AesRng, Block};
 
 const CHUNK_SIZE: usize = 10000;
@@ -584,7 +584,7 @@ fn run() {
        match options.ring {
            RingParameter::R64 => run_matrix_mul_benchmark::<R64>(&options),
            // RingParameter::R72 => run_benchmark::<z2r::R72>(&options),
-           // RingParameter::R78 => run_benchmark::<z2r::R78>(&options),
+           // RingParameter::R78 => run_benchmark::<z2r::R78>(&options
            RingParameter::R104 => run_matrix_mul_benchmark::<z2r::R104>(&options),
            // RingParameter::R110 => run_benchmark::<z2r::R110>(&options),
            // RingParameter::R112 => run_benchmark::<z2r::R112>(&options),
@@ -622,5 +622,5 @@ fn main() {
         println!("{:?}", options);
     }
 
-    run_matrix_mul_benchmark::<z2r::R244>(&options)
+    run_matrix_mul_benchmark::<R244>(&options)
 }
