@@ -622,5 +622,5 @@ fn main() {
         println!("{:?}", options);
     }
 
-    run_matrix_mul_benchmark::<R244>(&options)
+    run_matrix_mul_benchmark::<z2r::R244>(&options)
 }
