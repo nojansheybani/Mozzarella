@@ -21,7 +21,7 @@ use ocelot::quarksilver::{
 use ocelot::tools::BenchmarkMetaData;
 
 use scuttlebutt::channel::{Receivable, Sendable};
-use scuttlebutt::ring::Ring;
+use scuttlebutt::ring::{z2r, Ring};
 use scuttlebutt::{track_unix_channel_pair, AbstractChannel, AesRng, Block};
 
 const CHUNK_SIZE: usize = 10000;
